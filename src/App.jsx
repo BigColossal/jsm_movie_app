@@ -95,20 +95,25 @@ const App = () => {
           </header>
 
           {trendingMovies.length > 0 && (
-            <div className="wrapper">
-              <section className="trending">
-                <h2>Trending Movies</h2>
-                <ul>
+            <section className="trending">
+              <h2>Trending Movies</h2>
+              <div className="scroll-zone">
+                <ul className="scroll-list">
                   {trendingMovies.map((movie, index) => (
-                    <li key="movie.$id">
-                      <p>{index + 1}</p>
-                      <img src={movie.poster_url} alt={movie.title} />
+                    <li key={movie.$id} className="min-w-[230px] flex items-center">
+                      <p className="fancy-text mt-[22px] text-nowrap">{index + 1}</p>
+                      <img
+                        src={movie.poster_url}
+                        alt={movie.title}
+                        className="w-[127px] h-[163px] rounded-lg object-cover -ml-3.5"
+                      />
                     </li>
                   ))}
                 </ul>
-              </section>
-            </div>
+              </div>
+            </section>
           )}
+
 
           <section className="all-movies">
             <h2>All Movies</h2>

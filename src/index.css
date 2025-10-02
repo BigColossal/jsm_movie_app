@@ -20,6 +20,8 @@
   --background-image-hero-pattern: url("/hero-bg.png");
 }
 
+
+
 @layer base {
   body {
     font-family: "DM Sans", serif;
@@ -55,13 +57,14 @@
 
   .wrapper {
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
-  }
+}
+
 
   .trending {
     @apply mt-20;
 
     & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
+      @apply flex gap-5 w-full;
     }
 
     & ul li {
@@ -75,6 +78,14 @@
     & ul li img {
       @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
     }
+  }
+
+  .scroll-zone {
+    @apply w-full overflow-x-auto hide-scrollbar;
+  }
+
+  .scroll-list {
+    @apply flex gap-5 flex-nowrap min-w-max;
   }
 
   .search {
