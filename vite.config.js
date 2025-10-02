@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/jsm_movie_app/',
   plugins: [react(), tailwindcss()],
-  builds: {
+  build: {
     sourcemap: false
   }
 })
