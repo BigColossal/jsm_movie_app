@@ -88,6 +88,7 @@ const App = () => {
 
         <div className="wrapper">
           <header>
+            <img src="./logo.png" alt="logo" className="w-24 h-auto"/>
             <img src="./hero.png" alt="Hero Banner" />
             <h1>Find <span className="text-gradient">Movies</span> You'll Enjoy Without the Hassle</h1>
 
@@ -125,7 +126,7 @@ const App = () => {
             ) : (
               <ul>
                 {movieList.map((movie) => (
-                  <MovieCard key={movie.id} movie={movie} />
+                    <MovieCard key={movie.id} movie={movie} />
                 ))}
               </ul>
             )}
